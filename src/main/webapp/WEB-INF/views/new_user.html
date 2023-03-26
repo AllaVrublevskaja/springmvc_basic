@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    tr, th {
+      margin: 3rem;
+      border: 1px solid black;
+      background: bisque;
+    }
+  </style>
+  <title>Spring MVC test</title>
+</head>
+<body>
+  <form method="post" action="/users" th:object="${user}">
+
+    <input type="text" th:field="*{id}" >
+    <input type="text" th:field="*{email}">
+    <input type="text" th:field="*{password}">
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>

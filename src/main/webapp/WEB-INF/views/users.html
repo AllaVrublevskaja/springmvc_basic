@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        tr, th {
+            margin: 3rem;
+            border: 1px solid black;
+            background: bisque;
+        }
+    </style>
+    <title>Spring MVC test</title>
+</head>
+<body>
+    <h1>All users:</h1>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>email</th>
+            <th>password</th>
+        </tr>
+        <tr th:each="user : ${users}">
+            <td th:text="${user.getId()}"></td>
+            <td th:text="${user.getEmail()}"></td>
+            <td th:text="${user.getPassword()}"></td>
+        </tr>
+    </table>
+</body>
+</html>

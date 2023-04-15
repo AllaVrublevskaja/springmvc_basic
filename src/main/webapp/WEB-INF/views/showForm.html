@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring MVC test</title>
+    <link rel="stylesheet" href="/styles/css/style.css" />
+</head>
+
+<body>
+<h1>Найти пользователя</h1>
+
+<br>
+<hr>
+<br>
+<form method="post" action="/find/showUser" th:object="${user}" >
+
+    <label for="id" >Введите ID пользователя для поиска</label>
+    <input type="text" id="id" name="id" class = "lab1" th:field="*{id}">
+
+    <br> <br>
+    <hr>
+    <br>
+    <div>
+        <input type="submit"  value="Найти">
+    </div>
+</form>
+</body>
+</html>

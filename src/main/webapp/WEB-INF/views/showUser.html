@@ -1,0 +1,45 @@
+
+<!--<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>-->
+
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring MVC test</title>
+    <link rel="stylesheet" href="/styles/css/style.css" />
+</head>
+
+<body>
+<h1>Найден пользователь</h1>
+
+<br>
+<hr>
+<br>
+
+<form name="showuserform" action ="showuserform" method="post" th:object="${user}">
+    <div>
+        <label for="id" >ID</label>
+        <input type="text" id="id" name="id" class = "lab1" th:field="*{id}">
+    </div>
+    <br>
+    <div>
+        <label for="email" >EMAIL</label>
+        <input type="text" id="email" name="email" class = "lab2" th:field="*{email}">
+    </div>
+    <br>
+    <div>
+        <label for="password" >PASSWORD</label>
+        <input type="text" id="password" name="password" class = "lab3"
+               th:field="*{password}">
+    </div>
+
+<br>
+<hr>
+<br>
+<div class = "end row justify__content__center">
+    <input type="submit" name ="home" value="Назад" class ="cl">
+    <input type="submit" value="Удалить" name="delete" class ="cl">
+    <input type="submit" value="Изменить" name="update"class ="cl">
+</div>
+</form>
+</body>
+</html>

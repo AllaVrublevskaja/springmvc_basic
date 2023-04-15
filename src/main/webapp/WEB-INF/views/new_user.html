@@ -2,22 +2,39 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
   <meta charset="UTF-8">
-  <style>
-    tr, th {
-      margin: 3rem;
-      border: 1px solid black;
-      background: bisque;
-    }
-  </style>
   <title>Spring MVC test</title>
+  <link rel="stylesheet" href="/styles/css/style.css" />
 </head>
-<body>
-  <form method="post" action="/users" th:object="${user}">
 
-    <input type="text" th:field="*{id}" >
-    <input type="text" th:field="*{email}">
-    <input type="text" th:field="*{password}">
-    <input type="submit" value="Submit">
+<body>
+  <h1>Новый пользователь</h1>
+
+  <br>
+  <hr>
+  <br>
+
+  <form method="post" action="/" th:object="${user}">
+    <div>
+      <label for="id" >ID</label>
+      <input type="text" id="id" name="id" class = "lab1" th:field="*{id}">
+    </div>
+    <br>
+    <div>
+      <label for="email" >EMAIL</label>
+      <input type="text" id="email" name="email" class = "lab2" th:field="*{email}">
+    </div>
+    <br>
+    <div>
+      <label for="password" >PASSWORD</label>
+      <input type="text" id="password" name="password" class = "lab3"
+             th:field="*{password}">
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div>
+        <input type="submit"  value="Создать">
+    </div>
   </form>
 </body>
 </html>

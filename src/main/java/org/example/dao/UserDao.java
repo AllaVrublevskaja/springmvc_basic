@@ -26,7 +26,17 @@ public class UserDao {
                 .filter(u -> u.getId() == id).findFirst().orElseThrow();
     }
 
-    public void save(User user) {
-        users.add(user);
+    public void save(User user) {users.add(user);}
+
+    public Object delete(int id) {
+        users.removeIf(u -> u.getId() == id);
+        return null;
+    }
+
+    public Object update(int id, User user){
+        User userToUpdate = findById(id);
+        userToUpdate.setEmail(user.getEmail());
+        userToUpdate.setPassword(user.getPassword());
+        return null;
     }
 }

@@ -1,0 +1,53 @@
+body {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    background-color: #d0e4fe;
+    text-align: center;
+    padding-top: 100px;
+}
+a {
+    font-size: large;
+    text-decoration: none;
+    cursor: pointer;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.justify__content__center{
+    justify-content: center;
+}
+.container{
+    width: 80%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.end {
+    margin-top: 30px;
+}
+table {
+    width: 30%;
+    border: 2px solid gray;
+    border-collapse: collapse;
+    background: #f8f6f4;
+}
+tr, th {
+    margin: 10rem;
+    border: 1px solid gray;
+}
+.cl {
+    margin: 15px;
+}
+.lab1 {
+    margin-left: 78px;
+}
+.lab2 {
+    margin-left: 44px;
+}
+.lab3{
+    margin-left: 10px;
+}
